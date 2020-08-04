@@ -14,14 +14,18 @@
 .primaryHeading {
   color: var(--SecondaryColor);
   font-size: 3.8rem;
+  margin-bottom: 3rem;
 }
 .subHeading {
   font-size: 2rem;
   max-width: 54rem;
   line-height: 26px;
+  margin-bottom: 3rem;
 }
 
 .btn {
+  display: inline-block;
+  margin-left: 0;
   background-color: var(--PrimaryColor);
   color: var(--White);
   padding: 1.5rem 2rem;

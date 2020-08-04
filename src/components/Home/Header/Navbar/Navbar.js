@@ -1,40 +1,54 @@
 import React, { Component } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-import "./navbar.styles.scss"
-import Img from "gatsby-image"
+import styles from "./navbar.module.scss"
+import SiteLogo from "./SiteLogo/SiteLogo"
+import Burger from "./mobileMenu/Burger"
+import SideDrawer from "./mobileMenu/SideDrawer"
+import Backdrop from "./mobileMenu/Backdrop"
 
-const Navbar = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file: file(relativePath: { eq: "tbiLogo.png" }) {
-        childImageSharp {
-          fixed(height: 75) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-  console.log(data)
+class Navbar extends Component {
+  state = {
+    sideDrawerOpen: false,
+  }
 
-  return (
-    <nav id="navbar">
-      <div className="logo-container">
-        <Img fixed={data.file.childImageSharp.fixed} />
-      </div>
-      <div className="menu-container">
-        <div className="main-menu">
-          <Link to="/">Home</Link>
-          <Link to="/conctact/">Contact</Link>
+  clickHandler = () => {
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen }
+    })
+  }
+
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false })
+  }
+
+  render() {
+    // let backdrop
+    // if (this.state.sideDrawerOpen) {
+    //   backdrop = <Backdrop click={this.backdropClickHandler} />
+    // }
+    return (
+      <nav className={styles.navbar}>
+        <div className={styles.logoContainer}>
+          <SiteLogo />
         </div>
-        <div className="cta-menu">
-          <a href="/">Login</a>
-          <Link className="primaryBTN">Get Started Today</Link>
+        <div className={styles.menuContainer}>
+          <div className={styles.mainMenu}>
+            <Link to="/">Home</Link>
+            <Link to="/contact/">Contact</Link>
+          </div>
+          <div className={styles.ctaMenu}>
+            <a href="/">Login</a>
+            <Link to="/contact/" className={styles.btn}>
+              Get Started Today
+            </Link>
+          </div>
         </div>
-      </div>
-    </nav>
-  )
+        <Burger clickHandler={this.clickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {/* <Backdrop show={this.state.sideDrawerOpen} /> */}
+      </nav>
+    )
+  }
 }
 
 export default Navbar

@@ -2,6 +2,10 @@
 
 html {
   font-size: 62.5%;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 50%;
+  }
 }
 
 body {

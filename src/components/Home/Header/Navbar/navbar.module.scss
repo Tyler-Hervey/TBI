@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  align-items: center;
+  font-size: 1.6rem;
+  box-shadow: 0 2px 6px 0 rgba(#000, 0.13);
+  padding: 0 5rem;
+  max-height: 8rem;
+  z-index: 1000;
+
+  @media only screen and (max-device-width: 480px) {
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #3b373a;
+  &:not(:first-child) {
+    margin-left: 2rem;
+  }
+}
+
+a:visited {
+  color: #3b373a;
+}
+
+.logoContainer {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.menuContainer {
+  flex-grow: 7;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+.btn {
+  background-color: var(--PrimaryColor);
+  color: var(--White);
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  text-align: center;
+  white-space: nowrap;
+
+  &:visited {
+    color: var(--White);
+  }
+}

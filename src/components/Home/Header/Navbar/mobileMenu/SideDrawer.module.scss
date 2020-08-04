@@ -1,0 +1,46 @@
+.SideDrawer {
+  padding-top: 10rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  transform: translateX(100%);
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: var(--White);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 70%;
+  max-width: 40rem;
+  z-index: 100;
+  transition: all ease 0.8s;
+}
+.linkWrapper {
+  width: 100%;
+}
+
+a {
+  margin: 2rem;
+}
+.open {
+  padding-top: 10rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(0);
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: var(--White);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 70%;
+  max-width: 40rem;
+  z-index: 100;
+  transition: all ease 0.8s;
+}
