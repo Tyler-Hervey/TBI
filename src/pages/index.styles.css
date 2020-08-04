@@ -10,8 +10,6 @@ body {
 
 :root {
   --PrimaryColor: #b83a5f;
-}
-
-h1 {
-  color: var(--PrimaryColor);
+  --SecondaryColor: #1c2e3d;
+  --White: #fff;
 }

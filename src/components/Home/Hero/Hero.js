@@ -1,8 +1,9 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
+import HeroText from "./heroText"
 
-import "./hero.styles.scss"
+import heroStyles from "./hero.module.scss"
 
 const Hero = ({ children }) => {
   const bcgImg = useStaticQuery(graphql`
@@ -17,13 +18,12 @@ const Hero = ({ children }) => {
     }
   `)
   return (
-    <div className="heroWrapper">
+    <div>
       <BackgroundImage
-        className=""
+        className={heroStyles.heroWrapper}
         fluid={bcgImg.file.childImageSharp.fluid}
-        className="heroWrapper"
       >
-        {children}
+        <HeroText />
       </BackgroundImage>
     </div>
   )
