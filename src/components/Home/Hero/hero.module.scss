@@ -1,0 +1,32 @@
+.heroWrapper {
+  height: 80vh;
+  // width: 100%;
+  background-size: contain;
+  background-position: top right;
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapper {
+  margin-left: 12rem;
+}
+
+.primaryHeading {
+  color: var(--SecondaryColor);
+  font-size: 3.8rem;
+}
+.subHeading {
+  font-size: 2rem;
+  max-width: 54rem;
+  line-height: 26px;
+}
+
+.btn {
+  background-color: var(--PrimaryColor);
+  color: var(--White);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 23rem;
+  font-size: 1.6rem;
+  text-align: center;
+}

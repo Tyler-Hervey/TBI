@@ -3,14 +3,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./index.styles.css"
-import Hero from "../components/Home/Hero/Hero"
+import Hero from "../components/Home/Hero/hero"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero>
-      <h1>HERO WRAPPER</h1>
-    </Hero>
+    <Hero></Hero>
+    <h1>TESTING STYLING</h1>
   </Layout>
 )
 

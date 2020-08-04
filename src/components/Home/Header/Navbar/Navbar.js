@@ -9,7 +9,7 @@ const Navbar = () => {
     {
       file: file(relativePath: { eq: "tbiLogo.png" }) {
         childImageSharp {
-          fixed(height: 100) {
+          fixed(height: 75) {
             ...GatsbyImageSharpFixed
           }
         }
