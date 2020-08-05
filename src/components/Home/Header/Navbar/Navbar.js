@@ -5,6 +5,7 @@ import SiteLogo from "./SiteLogo/SiteLogo"
 import Burger from "./mobileMenu/Burger"
 import SideDrawer from "./mobileMenu/SideDrawer"
 import Backdrop from "./mobileMenu/Backdrop"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class Navbar extends Component {
   state = {
@@ -22,10 +23,10 @@ class Navbar extends Component {
   }
 
   render() {
-    // let backdrop
-    // if (this.state.sideDrawerOpen) {
-    //   backdrop = <Backdrop click={this.backdropClickHandler} />
-    // }
+    let backdrop
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
     return (
       <nav className={styles.navbar}>
         <div className={styles.logoContainer}>
@@ -33,19 +34,23 @@ class Navbar extends Component {
         </div>
         <div className={styles.menuContainer}>
           <div className={styles.mainMenu}>
-            <Link to="/">Home</Link>
-            <Link to="/contact/">Contact</Link>
+            <AniLink fade to="/">
+              Home
+            </AniLink>
+            <AniLink fade to="/contact/">
+              Contact
+            </AniLink>
           </div>
           <div className={styles.ctaMenu}>
-            <a href="/">Login</a>
-            <Link to="/contact/" className={styles.btn}>
+            {/* <a href="/">Login</a> */}
+            <AniLink fade to="/contact/" className={styles.btn}>
               Get Started Today
-            </Link>
+            </AniLink>
           </div>
         </div>
         <Burger clickHandler={this.clickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
-        {/* <Backdrop show={this.state.sideDrawerOpen} /> */}
+        {/* {backdrop} */}
       </nav>
     )
   }
