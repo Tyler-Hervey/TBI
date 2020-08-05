@@ -1,0 +1,19 @@
+.title {
+  font-size: 3.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.tagline {
+  font-size: 1.6rem;
+  color: var(--PrimaryColor);
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-bottom: 0.4rem;
+}
+.titleCenter {
+  max-width: 100rem;
+  text-align: center;
+  margin: 7.5rem auto;
+}
