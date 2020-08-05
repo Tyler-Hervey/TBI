@@ -8,13 +8,15 @@ const SideDrawer = props => {
     drawerClasses = styles.open
   }
   return (
-    <div className={drawerClasses}>
-      <Link to="/">Home</Link>
-      <Link to="/contact/">Contact</Link>
-      <a href="/">Login</a>
-      <Link to="/contact/" className={styles.btn}>
-        Get Started Today
-      </Link>
+    <div>
+      <div className={drawerClasses}>
+        <Link to="/">Home</Link>
+        <Link to="/contact/">Contact</Link>
+        <a href="/">Login</a>
+        <Link to="/contact/" className={styles.btn}>
+          Get Started Today
+        </Link>
+      </div>
     </div>
   )
 }
