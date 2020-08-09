@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   .button {
-    position: absolute;
+    // position: absolute;
     top: 5%;
     right: 2rem;
     display: flex;
@@ -29,6 +29,7 @@
       margin: 0;
       padding: 0;
     }
+
     div:before {
       content: "";
       position: absolute;
@@ -42,6 +43,7 @@
       margin: 0;
       padding: 0;
     }
+
     div:after {
       content: "";
       top: 0.8rem;

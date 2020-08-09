@@ -30,9 +30,7 @@ const OurClients = () => {
   return (
     <section>
       <div className={styles.clientWrapper}>
-        <h4 className={styles.clientHeading}>
-          Displaying a Directory of Images
-        </h4>
+        <h4 className={styles.clientHeading}>Some of Our Happy Clients</h4>
         <div className={styles.logoContainer}>
           {images.map(image => (
             <Img

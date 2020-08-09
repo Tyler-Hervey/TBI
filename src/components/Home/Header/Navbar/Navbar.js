@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 import styles from "./navbar.module.scss"
 import SiteLogo from "./SiteLogo/SiteLogo"
 import Burger from "./mobileMenu/Burger"
