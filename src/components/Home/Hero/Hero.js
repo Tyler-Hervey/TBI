@@ -11,7 +11,7 @@ const Hero = ({ children }) => {
       file: file(relativePath: { eq: "phoneMockups.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.phaseTextWrapper {
+  max-width: 46rem;
+  margin-right: 9rem;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+}
+h4 {
+  position: relative;
+  z-index: 100;
+}
+
+h4:before {
+  position: absolute;
+  content: "1";
+  color: #f6f3fd;
+  font-size: 10rem;
+  font-weight: 800;
+  top: -8rem;
+  left: -3.2rem;
+  z-index: -1;
+}

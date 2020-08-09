@@ -1,7 +1,7 @@
 import React from "react"
 import CenteredHeading from "../Heading/CenteredHeading"
 
-const whyInfluencers = () => {
+const WhyInfluencers = () => {
   return (
     <section>
       <div>
@@ -14,4 +14,4 @@ const whyInfluencers = () => {
   )
 }
 
-export default whyInfluencers
+export default WhyInfluencers
