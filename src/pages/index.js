@@ -6,6 +6,7 @@ import Hero from "../components/Home/Hero/hero"
 import OurClients from "../components/Home/OurClients/OurClients"
 import WhyInfluencers from "../components/home/whyInfluencers/WhyInfluencers"
 import Results from "../components/home/Results/Results"
+import CampaignPhases from "../components/Home/campaignPhases/compaignPhases"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <OurClients />
     <WhyInfluencers />
     <Results />
+    <CampaignPhases />
   </Layout>
 )
 
