@@ -20,10 +20,13 @@ const VideoModule = () => {
   return (
     <div className={styles.videoModule}>
       {/* <div className="linebreak"></div> */}
-      <Img
-        className={styles.videoCTA}
-        fluid={data.file.childImageSharp.fluid}
-      />
+      <div className="imgWrapper">
+        <Img
+          className={styles.videoCTA}
+          fluid={data.file.childImageSharp.fluid}
+        />
+      </div>
+
       <div className={styles.phaseTextWrapper}>
         <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
         <Title>Your Campaigns Should be Performance Based</Title>
