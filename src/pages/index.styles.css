@@ -16,4 +16,18 @@ body {
   --PrimaryColor: #b83a5f;
   --SecondaryColor: #1c2e3d;
   --White: #fff;
+  --TextColor: #6d6d6d;
+  --BgColor: #f7f4fe;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--SecondaryColor);
+}
+
+p {
+  color: var(--textColor);
 }

@@ -6,7 +6,7 @@ import styles from "../phase.module.scss"
 const PhaseText = ({ number }) => {
   return (
     <div className={styles.phaseTextWrapper}>
-      <Tagline>A/B TESTING</Tagline>
+      <Tagline className={styles.phaseNum}>A/B TESTING</Tagline>
       <Title>Test Influencer Groups to Optimize ROI</Title>
       <p>
         The goal is to determine the top performing influencers. Twillo places
