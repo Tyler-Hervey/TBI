@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.phaseTextWrapper {
+  max-width: 44rem;
+  margin-right: 9rem;
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+}
+
+.phaseWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.image {
+  min-width: 65rem;
+  margin-right: 9rem;
+}
+
+.phaseTextTwo {
+  font-size: 1.6rem;
+  color: var(--PrimaryColor);
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-bottom: 0.4rem;
+
+  position: relative;
+  z-index: 100;
+}
+
+.phaseTextTwo:before {
+  position: absolute;
+  content: "2";
+  color: #f6f3fd;
+  font-size: 10rem;
+  font-weight: 800;
+  top: -8rem;
+  left: -4.2rem;
+  z-index: -1;
+}

@@ -7,16 +7,17 @@ import OurClients from "../components/Home/OurClients/OurClients"
 import WhyInfluencers from "../components/home/whyInfluencers/WhyInfluencers"
 import Results from "../components/home/Results/Results"
 import CampaignPhases from "../components/Home/campaignPhases/compaignPhases"
+import VideoModule from "../components/Home/VideoModule/VideoModule"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero></Hero>
     <OurClients />
-
     <WhyInfluencers />
     <Results />
     <CampaignPhases />
+    <VideoModule />
   </Layout>
 )
 
