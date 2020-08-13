@@ -6,7 +6,7 @@ import Image from "./Image"
 const PhaseOne = () => {
   return (
     <div className={styles.phaseWrapper}>
-      <PhaseText />
+      <PhaseText phaseText={"phaseTextOne"} />
       <Image />
     </div>
   )

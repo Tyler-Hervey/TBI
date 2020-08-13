@@ -1,14 +1,14 @@
 import React from "react"
 import Tagline from "../../Heading/Tagline"
 import Title from "../../Heading/Title"
-import styles from "../phase.module.scss"
+import styles from "./phaseOne.module.scss"
 
-const PhaseText = ({ number }) => {
+const PhaseText = props => {
   return (
     <div className={styles.phaseTextWrapper}>
-      <Tagline className={styles.phaseNum}>A/B TESTING</Tagline>
+      <h4 className={styles.phaseTextOne}>A/B TESTING</h4>
       <Title>Test Influencer Groups to Optimize ROI</Title>
-      <p>
+      <p className={styles.paragraph}>
         The goal is to determine the top performing influencers. Twillo places
         influencers into separate test groups to test promotional language,
         different social media platforms (Instagram,Tik Tok, FB), different

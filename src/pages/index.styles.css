@@ -31,3 +31,9 @@ h6 {
 p {
   color: var(--textColor);
 }
+
+.linebreak {
+  width: 85rem;
+  height: 1px;
+  border-bottom: 1px solid #eeeeee;
+}

@@ -1,39 +1,38 @@
-.wrapper {
+.videoModule {
   display: flex;
   justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  align-items: center;
 }
-
-.phaseTextWrapper {
-  max-width: 44rem;
+.imgWrapper {
+  flex: 1;
   margin-right: 9rem;
 }
 
+.videoCTA {
+  flex: 1;
+  min-width: 32vw;
+  margin-right: 9rem;
+}
+
+.phaseTextWrapper {
+  max-width: 46rem;
+  margin-right: 9rem;
+  flex: 1;
+}
+
 .paragraph {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2.7rem;
 }
 
-.phaseTextOne {
+.phaseText {
   font-size: 1.6rem;
   color: var(--PrimaryColor);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 2.2px;
   margin-bottom: 0.4rem;
   position: relative;
   z-index: 100;
-}
-
-.phaseTextOne:before {
-  position: absolute;
-  content: "1";
-  color: #f6f3fd;
-  font-size: 10rem;
-  font-weight: 800;
-  top: -8rem;
-  left: -3.2rem;
-  z-index: -1;
 }
