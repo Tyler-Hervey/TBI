@@ -1,22 +1,29 @@
-.videoModule {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .contentWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .imgWrapper {
-  flex: 1;
-  margin-right: 9rem;
+  // flex: 1;
+  // margin-right: 9rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.playBtn {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% + 20px);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .videoCTA {
   flex: 1;
   min-width: 32vw;
-  margin-right: 9rem;
+  // margin-right: 9rem;
 }
 
 .phaseTextWrapper {

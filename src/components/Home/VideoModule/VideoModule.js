@@ -6,6 +6,8 @@ import Title from "../Heading/Title"
 import { graphql, useStaticQuery } from "gatsby"
 import Video from "../Video/Video"
 
+import playBtn from "./playBtn.svg"
+
 const VideoModule = () => {
   const data = useStaticQuery(graphql`
     {
@@ -16,40 +18,31 @@ const VideoModule = () => {
           }
         }
       }
-      bcgImg: file(relativePath: { eq: "videoModule/videoBG.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
     }
   `)
 
   return (
     <div className={styles.videoModule}>
       {/* <div className="linebreak"></div> */}
-      <BackgroundImage fluid={data.bcgImg.childImageSharp.fluid}>
-        <div className={styles.contentWrapper}>
-          <div className="imgWrapper">
-            <Img
-              className={styles.videoCTA}
-              fluid={data.profileImg.childImageSharp.fluid}
-            />
-          </div>
-          <div className={styles.phaseTextWrapper}>
-            <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
-            <Title>Your Campaigns Should be Performance Based</Title>
-            <p className={styles.paragraph}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+      <div className={styles.contentWrapper}>
+        <div className={styles.imgWrapper}>
+          <Img
+            className={styles.videoCTA}
+            fluid={data.profileImg.childImageSharp.fluid}
+          />
+          <img className={styles.playBtn} src={playBtn} />
         </div>
-      </BackgroundImage>
-      />
+        <div className={styles.phaseTextWrapper}>
+          <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
+          <Title>Your Campaigns Should be Performance Based</Title>
+          <p className={styles.paragraph}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
       <Video />
     </div>
   )
