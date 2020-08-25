@@ -1,3 +1,8 @@
+.videoModule {
+  // height: 100%;
+  position: relative;
+}
+
 .contentWrapper {
   display: flex;
   justify-content: center;
@@ -5,11 +10,8 @@
 }
 
 .imgWrapper {
-  // flex: 1;
-  // margin-right: 9rem;
   position: relative;
-  margin: 0;
-  padding: 0;
+  margin-right: 9rem;
 }
 
 .playBtn {

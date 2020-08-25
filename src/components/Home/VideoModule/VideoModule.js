@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./video.module.scss"
 import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
 import Title from "../Heading/Title"
 import { graphql, useStaticQuery } from "gatsby"
 import Video from "../Video/Video"
@@ -21,16 +20,40 @@ const VideoModule = () => {
     }
   `)
 
+  const [video, setVideo] = useState(false)
+
+  useEffect(() => {
+    const closeVideo = ({ target }) => {
+      if (target.id !== "iframePlay") setVideo(false)
+    }
+
+    document.addEventListener("click", closeVideo)
+  })
+
+  useEffect(() => {
+    const keyHandler = ({ keyCode }) => {
+      if (keyCode !== 27) return
+      setVideo(false)
+    }
+    document.addEventListener("keydown", keyHandler)
+
+    return () => document.removeEventListener("keydown", keyHandler)
+  })
+
   return (
     <div className={styles.videoModule}>
-      {/* <div className="linebreak"></div> */}
       <div className={styles.contentWrapper}>
         <div className={styles.imgWrapper}>
           <Img
             className={styles.videoCTA}
             fluid={data.profileImg.childImageSharp.fluid}
           />
-          <img className={styles.playBtn} src={playBtn} />
+          <img
+            className={styles.playBtn}
+            id="iframePlay"
+            src={playBtn}
+            onClick={() => setVideo(!video)}
+          />
         </div>
         <div className={styles.phaseTextWrapper}>
           <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
@@ -43,7 +66,7 @@ const VideoModule = () => {
           </p>
         </div>
       </div>
-      <Video />
+      <Video showVid={video} />
     </div>
   )
 }
