@@ -20,6 +20,7 @@
     "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-remark-embedder": "^3.0.0",
     "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-youtube": "^2.0.1",
     "gatsby-transformer-remark": "^2.8.28",
     "gatsby-transformer-sharp": "^2.5.7",
     "gsap": "^3.4.2",

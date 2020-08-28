@@ -22,9 +22,26 @@ const VideoModule = () => {
 
   const [video, setVideo] = useState(false)
 
+  const stopVideo = element => {
+    const iframe = element.querySelector("iframe")
+    const video = element.querySelector("video")
+    if (iframe !== null) {
+      const iframeSrc = iframe.src
+      iframe.src = iframeSrc
+    }
+    if (video !== null) {
+      video.pause()
+    }
+  }
+
   useEffect(() => {
     const closeVideo = ({ target }) => {
-      if (target.id !== "iframePlay") setVideo(false)
+      if (target.id !== "iframePlay") {
+        const styleName = `.${styles.videoModule}`
+        const container = document.querySelector(styleName)
+        stopVideo(container)
+        setVideo(false)
+      }
     }
 
     document.addEventListener("click", closeVideo)
@@ -33,6 +50,10 @@ const VideoModule = () => {
   useEffect(() => {
     const keyHandler = ({ keyCode }) => {
       if (keyCode !== 27) return
+
+      const styleName = `.${styles.videoModule}`
+      const container = document.querySelector(styleName)
+      stopVideo(container)
       setVideo(false)
     }
     document.addEventListener("keydown", keyHandler)
@@ -41,7 +62,7 @@ const VideoModule = () => {
   })
 
   return (
-    <div className={styles.videoModule}>
+    <div className={styles.videoModule + ` staticWrapper`}>
       <div className={styles.contentWrapper}>
         <div className={styles.imgWrapper}>
           <Img
