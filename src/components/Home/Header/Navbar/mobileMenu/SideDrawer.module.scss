@@ -15,14 +15,14 @@
   max-width: 40rem;
   z-index: 100;
   transition: all ease 0.8s;
+  a {
+    margin: 2rem;
+  }
 }
 .linkWrapper {
   width: 100%;
 }
 
-a {
-  margin: 2rem;
-}
 .open {
   padding-top: 10rem;
   position: fixed;
@@ -41,6 +41,9 @@ a {
   max-width: 40rem;
   z-index: 100;
   transition: all ease 0.8s;
+  a {
+    margin: 2rem;
+  }
 }
 
 .wrapper {

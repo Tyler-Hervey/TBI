@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../../components/layout"
+import Layout from "../layout/layout"
 import Header from "../../components/Contact/Header/Header"
 import styles from "./contactLayout.module.scss"
 
