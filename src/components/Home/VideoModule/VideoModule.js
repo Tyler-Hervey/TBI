@@ -5,6 +5,9 @@ import Title from "../Heading/Title"
 import { graphql, useStaticQuery } from "gatsby"
 import Video from "../Video/Video"
 
+import SquareIcon from "../../../images/svg/rectangleHoriz.svg"
+import AngledSquare from "../../../images/svg/rectangle45.svg"
+import AngledSquareFull from "../../../images/svg/rectangle45full.svg"
 import playBtn from "./playBtn.svg"
 
 const VideoModule = () => {
@@ -14,6 +17,13 @@ const VideoModule = () => {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      bcgImg: file(relativePath: { eq: "diamond-bg.png" }) {
+        childImageSharp {
+          fixed(height: 500) {
+            ...GatsbyImageSharpFixed_tracedSVG
           }
         }
       }
@@ -63,6 +73,22 @@ const VideoModule = () => {
 
   return (
     <div className={styles.videoModule + ` staticWrapper`}>
+      <AngledSquare
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "-23rem",
+        }}
+      />
+      <AngledSquareFull
+        style={{
+          position: "absolute",
+          right: "0",
+          top: "-10rem",
+          zIndex: "-1",
+        }}
+      />
+      <div className={styles.boxBoarder}></div>
       <div className={styles.contentWrapper}>
         <div className={styles.imgWrapper}>
           <Img
@@ -75,7 +101,18 @@ const VideoModule = () => {
             src={playBtn}
             onClick={() => setVideo(!video)}
           />
+          <SquareIcon className={styles.dotsHoriz} />
         </div>
+        <Img
+          fixed={data.bcgImg.childImageSharp.fixed}
+          style={{
+            position: "absolute",
+            right: "10rem",
+            bottom: "8rem",
+            zIndex: "1",
+          }}
+          className={styles.diamondBcg}
+        />
         <div className={styles.phaseTextWrapper}>
           <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
           <Title>Your Campaigns Should be Performance Based</Title>

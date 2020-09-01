@@ -12,8 +12,8 @@ import styled from "styled-components"
 import Header from "../header"
 import "./layout.css"
 
-import FBIcon from "../../images/facebook.svg"
-import IGIcon from "../../images/instagram.svg"
+import FBIcon from "../../images/svg/facebook.svg"
+import IGIcon from "../../images/svg/instagram.svg"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -81,9 +81,11 @@ const Footer = styled.footer`
 
   h4 {
     font-size: 3.8rem;
+    margin-bottom: 4rem;
   }
   p {
     font-size: 1.8rem;
+    margin-bottom: 4rem;
   }
   a {
     color: var(--White);
@@ -102,7 +104,7 @@ const Footer = styled.footer`
 
   .signature {
     font-size: 1.4rem;
-    line-height: 1.8rem;
+    line-height: 2.2rem;
   }
 
   .column2 {

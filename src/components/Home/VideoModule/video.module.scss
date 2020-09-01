@@ -1,6 +1,14 @@
 .videoModule {
-  // height: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  margin: 5rem auto;
   position: relative;
+}
+
+.dotsBcg {
+  position: absolute;
+  right: 0;
 }
 
 .contentWrapper {
@@ -9,9 +17,30 @@
   align-items: center;
 }
 
+.boxBoarder {
+  position: absolute;
+  border-radius: 10px;
+  z-index: 101;
+  border: 4px solid #f7f4fe;
+  top: 7rem;
+  left: 50%;
+  transform: translateX(-55%);
+  height: 60vh;
+  width: 85vw;
+}
+
+.dotsHoriz {
+  position: absolute;
+  z-index: -1;
+  bottom: -5rem;
+  left: -3rem;
+}
+
 .imgWrapper {
   position: relative;
   margin-right: 9rem;
+  transform: translateY(-30%);
+  z-index: 1001;
 }
 
 .playBtn {
@@ -25,7 +54,6 @@
 .videoCTA {
   flex: 1;
   min-width: 32vw;
-  // margin-right: 9rem;
 }
 
 .phaseTextWrapper {

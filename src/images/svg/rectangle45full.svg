@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="292px" height="338px" viewBox="0 0 292 338" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rectangle45full</title>
+    <defs>
+        <pattern id="pattern-1" width="50.8531664" height="50.8531664" x="1273.14683" y="64.1468336" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-2" transform="scale(0.759002483,0.759002483)"></use>
+        </pattern>
+        <image id="image-2" width="67" height="67" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGN5fIAKQAAAKZJREFUeAHt2dENgCAMBUB0DmbQDZha59NUVqAGkmOAl3Ll61Hq2a4y+NSj3SvlxvVj5sEM4ggQIECAAAECBAgQIECAAAECBAgQIDCXQEYR+hXCCQVrVm5sJLL3spUnZT2r5aYgCCVAgAABAgQIECBAgAABAgQIECBAgMBEAtrxvgzt+ESP0igECBAgQIAAAQIECBAgQIAAAQIECBAg8KeAr4KuHQ4vJSIjvTE1HYUAAAAASUVORK5CYII="></image>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Twillo-Home-Revised" transform="translate(-1142.000000, -4518.000000)" fill="url(#pattern-1)">
+            <g id="dot-bg" transform="translate(-138.000000, 4455.000000)">
+                <rect id="rectangle45full" transform="translate(1449.000000, 240.000000) rotate(45.000000) translate(-1449.000000, -240.000000) " x="1324" y="115" width="250" height="250"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
