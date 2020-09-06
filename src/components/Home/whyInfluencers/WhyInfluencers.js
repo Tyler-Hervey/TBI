@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import AltTitle from "../../AltTitle"
 import whyMicro from "../../../constants/whyMicro"
+import TallSquares from "../../../images/svg/squareDotsTall.svg"
 
 const WhyInfluencers = ({ className }) => {
   const data = useStaticQuery(graphql`
@@ -25,51 +26,76 @@ const WhyInfluencers = ({ className }) => {
         title="Something about micro influencers high engagement rate because of their niche and targeted Audience"
       />
       <div className="wrapper">
-        <Img className="img" fluid={data.file.childImageSharp.fluid} />
-        <div className="bullets">
-          {whyMicro.map((item, index) => {
-            return (
-              <div key={index}>
-                <h4>
-                  <span className="icon">{item.icon}</span>
-                  <span className="iconTitle">{item.title}</span>
-                </h4>
-                <p className="text">{item.text}</p>
-              </div>
-            )
-          })}
+        <TallSquares
+          style={{
+            position: "absolute",
+            left: "0",
+          }}
+        />
+
+        <div className="content-wrapper">
+          <Img className="img" fluid={data.file.childImageSharp.fluid} />
+          <div className="bullets">
+            {whyMicro.map((item, index) => {
+              return (
+                <div key={index}>
+                  <h4>
+                    <span className="icon">{item.icon}</span>
+                    <span className="iconTitle">{item.title}</span>
+                  </h4>
+                  <p className="text">{item.text}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
+
+        <TallSquares
+          style={{
+            position: "absolute",
+            right: "0",
+          }}
+        />
       </div>
     </section>
   )
 }
 
-export default styled(WhyInfluencers)`
+const whyInfluencers = styled(WhyInfluencers)`
   .wrapper {
     display: flex;
-    max-width: 120rem;
+    position: relative;
+    width: 100%;
     margin: 8.5rem auto 0;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+  }
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
   }
   .img {
     width: 70rem;
   }
   .bullets {
-    position: relative;
     width: 40rem;
     margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
   .bullets:before {
     content: "";
     position: absolute;
     width: 70rem;
     height: 55rem;
     background-color: var(--BgColor);
-    top: 50%;
-    top: 50%;
     transform: translateY(-50%);
-    right: -20%;
+    top: 50%;
+    right: -2rem;
     z-index: -1;
     border-radius: 10px;
   }
@@ -94,3 +120,4 @@ export default styled(WhyInfluencers)`
     line-height: 1.4;
   }
 `
+export default whyInfluencers

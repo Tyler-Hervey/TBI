@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./heading.module.scss"
+import styles from "./home-heading.module.scss"
 
 const Tagline = props => {
   return (

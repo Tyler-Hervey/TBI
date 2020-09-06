@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="626px" viewBox="0 0 68 626" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>squareDotsTall</title>
+    <defs>
+        <pattern id="pattern-1" width="67" height="67" x="-67" y="133" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-2"></use>
+        </pattern>
+        <image id="image-2" width="67" height="67" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGN5fIAKQAAAKZJREFUeAHt2dENgCAMBUB0DmbQDZha59NUVqAGkmOAl3Ll61Hq2a4y+NSj3SvlxvVj5sEM4ggQIECAAAECBAgQIECAAAECBAgQIDCXQEYR+hXCCQVrVm5sJLL3spUnZT2r5aYgCCVAgAABAgQIECBAgAABAgQIECBAgMBEAtrxvgzt+ESP0igECBAgQIAAAQIECBAgQIAAAQIECBAg8KeAr4KuHQ4vJSIjvTE1HYUAAAAASUVORK5CYII="></image>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Twillo-Home-Revised" transform="translate(-9.000000, -1141.000000)" fill="url(#pattern-1)">
+            <g id="bulit-list" transform="translate(9.000000, 941.000000)">
+                <rect id="squareDotsTall" x="0" y="200" width="85" height="645"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -19,6 +19,7 @@ const Video = props => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         id="founder-vid"
+        title="Introduction of the brand from the founder"
       />
     </div>
   )

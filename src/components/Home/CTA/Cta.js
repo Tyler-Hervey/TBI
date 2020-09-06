@@ -11,6 +11,7 @@ const Cta = () => {
         doloribus nihil, placeat ad at, exercitationem dolorem quibusdam magni
         tempore distinctio pariatur?
       </Paragraph>
+      <Btn>Get in Touch</Btn>
     </Wrapper>
   )
 }
@@ -35,6 +36,23 @@ const Paragraph = styled.p`
   font-weight: 400;
   line-height: 3.3rem;
   margin-top: 4.5rem;
+`
+const Btn = styled.button`
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 0;
+  background-color: var(--PrimaryColor);
+  color: var(--White);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 23rem;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+
+  &:visited {
+    color: var(--White);
+  }
 `
 
 export default Cta

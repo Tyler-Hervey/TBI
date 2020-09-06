@@ -3,7 +3,6 @@ import styles from "./navbar.module.scss"
 import SiteLogo from "./SiteLogo/SiteLogo"
 import Burger from "./mobileMenu/Burger"
 import SideDrawer from "./mobileMenu/SideDrawer"
-import Backdrop from "./mobileMenu/Backdrop"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class Navbar extends Component {
@@ -22,10 +21,6 @@ class Navbar extends Component {
   }
 
   render() {
-    let backdrop
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />
-    }
     return (
       <nav className={styles.navbar}>
         <div className={styles.logoContainer}>
@@ -49,7 +44,6 @@ class Navbar extends Component {
         </div>
         <Burger clickHandler={this.clickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
-        {/* {backdrop} */}
       </nav>
     )
   }

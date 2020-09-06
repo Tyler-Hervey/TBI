@@ -33,4 +33,9 @@
   max-width: 23rem;
   font-size: 1.6rem;
   text-align: center;
+  text-decoration: none;
+
+  &:visited {
+    color: var(--White);
+  }
 }

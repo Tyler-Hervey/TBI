@@ -8,7 +8,7 @@ import Video from "../Video/Video"
 import SquareIcon from "../../../images/svg/rectangleHoriz.svg"
 import AngledSquare from "../../../images/svg/rectangle45.svg"
 import AngledSquareFull from "../../../images/svg/rectangle45full.svg"
-import playBtn from "./playBtn.svg"
+import PlayBtn from "../../../images/svg/playBtn.svg"
 
 const VideoModule = () => {
   const data = useStaticQuery(graphql`
@@ -49,8 +49,10 @@ const VideoModule = () => {
       if (target.id !== "iframePlay") {
         const styleName = `.${styles.videoModule}`
         const container = document.querySelector(styleName)
-        stopVideo(container)
-        setVideo(false)
+        if (container !== null) {
+          stopVideo(container)
+          setVideo(false)
+        }
       }
     }
 
@@ -95,23 +97,28 @@ const VideoModule = () => {
             className={styles.videoCTA}
             fluid={data.profileImg.childImageSharp.fluid}
           />
-          <img
+          <div
             className={styles.playBtn}
             id="iframePlay"
-            src={playBtn}
-            onClick={() => setVideo(!video)}
-          />
+            onClick={() => setVideo(true)}
+          >
+            <PlayBtn
+              style={{
+                pointerEvents: "none",
+              }}
+            />
+          </div>
+
           <SquareIcon className={styles.dotsHoriz} />
         </div>
         <Img
           fixed={data.bcgImg.childImageSharp.fixed}
           style={{
             position: "absolute",
-            right: "10rem",
-            bottom: "8rem",
             zIndex: "1",
+            top: "7rem",
+            right: "4rem",
           }}
-          className={styles.diamondBcg}
         />
         <div className={styles.phaseTextWrapper}>
           <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
