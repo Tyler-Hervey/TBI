@@ -1,0 +1,25 @@
+.clientWrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 3.5rem 0;
+}
+
+.clientHeading {
+  text-align: center;
+  font-size: 1.8rem;
+  // margin-bottom: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.clientLogos {
+  margin: 2rem 1rem 0;
+}
