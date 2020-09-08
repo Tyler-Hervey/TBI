@@ -1,7 +1,6 @@
 import React from "react"
 import Tagline from "./Tagline"
 import Title from "./Title"
-import styles from "./heading.module.scss"
 
 const Heading = props => {
   return (

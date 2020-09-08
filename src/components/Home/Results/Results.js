@@ -1,16 +1,26 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import CenteredHeading from "../Heading/CenteredHeading"
+import BackgroundImage from "gatsby-background-image"
+import AltTitle from "../../AltTitle"
 import styles from "./results.module.scss"
 
 const Results = () => {
-  const rptImg = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      file: file(relativePath: { eq: "reportGraphic.png" }) {
+      bcgImg: file(relativePath: { eq: "social-logos-bcg.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      reportImg: file(
+        relativePath: { eq: "influencer-performance-report.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -19,14 +29,23 @@ const Results = () => {
   return (
     <section>
       <div>
-        <CenteredHeading
+        <AltTitle
+          center
           tagline="Only Pay For Results"
           title="We Help You Identify the Top Performing Influencers Driving Results for Your Campaign"
         />
-        <Img
+        <BackgroundImage
           className={styles.resultsGraphic}
-          fluid={rptImg.file.childImageSharp.fluid}
-        />
+          fluid={data.bcgImg.childImageSharp.fluid}
+          style={{
+            backgroundSize: "contain",
+          }}
+        >
+          <Img
+            fluid={data.reportImg.childImageSharp.fluid}
+            className={styles.report}
+          />
+        </BackgroundImage>
       </div>
     </section>
   )

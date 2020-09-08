@@ -1,5 +1,4 @@
 import React from "react"
-import Tagline from "../../Heading/Tagline"
 import Title from "../../Heading/Title"
 import styles from "./phaseThree.module.scss"
 

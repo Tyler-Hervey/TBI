@@ -9,13 +9,13 @@ export default [
       "The concept that influencers campaign is …. FALSE. Trust is Key. Trust tends to aggregate in smaller audiences must have millions of followers for a successful",
   },
   {
-    icon: <FaRegThumbsUp />,
+    icon: <FaPiggyBank />,
     title: "Trust Aggregates in Smaller Audiences",
     text:
       "The concept that influencers campaign is …. FALSE. Trust is Key. Trust tends to aggregate in smaller audiences must have millions of followers for a successful",
   },
   {
-    icon: <FaRegThumbsUp />,
+    icon: <FaBullhorn />,
     title: "Trust Aggregates in Smaller Audiences",
     text:
       "The concept that influencers campaign is …. FALSE. Trust is Key. Trust tends to aggregate in smaller audiences must have millions of followers for a successful",
