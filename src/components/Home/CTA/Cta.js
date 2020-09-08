@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Btn from "../Hero/btn"
 
 const Cta = () => {
   return (
@@ -24,6 +25,10 @@ const Wrapper = styled.section`
   text-align: center;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 900px) {
+    padding: 5rem 0;
+  }
 `
 
 const Title = styled.h4`
@@ -36,23 +41,6 @@ const Paragraph = styled.p`
   font-weight: 400;
   line-height: 3.3rem;
   margin-top: 4.5rem;
-`
-const Btn = styled.button`
-  cursor: pointer;
-  display: inline-block;
-  margin-left: 0;
-  background-color: var(--PrimaryColor);
-  color: var(--White);
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  max-width: 23rem;
-  font-size: 1.6rem;
-  text-align: center;
-  text-decoration: none;
-
-  &:visited {
-    color: var(--White);
-  }
 `
 
 export default Cta

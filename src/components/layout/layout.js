@@ -38,8 +38,8 @@ const Layout = ({ children }) => {
             <div className="signature">
               Copyright© {new Date().getFullYear()} Twillo Brand Influencers
               <br />
-              Web Development and Design by
-              <a href="https://www.moximetrics.com"> Moximetrics </a>
+              Web Development and Design by{" "}
+              <a href="https://www.moximetrics.com">Moximetrics </a>
             </div>
           </div>
           <div className="column2"></div>

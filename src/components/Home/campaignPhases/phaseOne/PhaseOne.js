@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./phaseOne.module.scss"
-import PhaseText from "./PhaseText"
-import Image from "./Image"
+import PhaseText from "./PhaseOneText"
+import Image from "./PhaseOneImage"
 
 const PhaseOne = () => {
   return (

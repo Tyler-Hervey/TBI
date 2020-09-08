@@ -70,13 +70,25 @@ const whyInfluencers = styled(WhyInfluencers)`
     justify-content: center;
     align-items: center;
   }
+
   .content-wrapper {
     display: flex;
     justify-content: center;
     position: relative;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
   }
   .img {
-    width: 70rem;
+    width: 50vw;
+    @media screen and (max-width: 900px) {
+      width: 95vw;
+      margin-bottom: 5rem;
+    }
   }
   .bullets {
     width: 40rem;
@@ -85,6 +97,13 @@ const whyInfluencers = styled(WhyInfluencers)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 900px) {
+      background-color: var(--BgColor);
+      border-radius: 10px;
+      padding: 2rem;
+      width: 70vw;
+      margin: 0;
+    }
   }
 
   .bullets:before {
@@ -98,6 +117,10 @@ const whyInfluencers = styled(WhyInfluencers)`
     right: -2rem;
     z-index: -1;
     border-radius: 10px;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
   }
   .icon {
     background: white;

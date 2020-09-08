@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styles from "./video.module.scss"
+import videoStyles from "./video.module.scss"
 import Img from "gatsby-image"
 import Title from "../Heading/Title"
 import { graphql, useStaticQuery } from "gatsby"
@@ -47,7 +47,7 @@ const VideoModule = () => {
   useEffect(() => {
     const closeVideo = ({ target }) => {
       if (target.id !== "iframePlay") {
-        const styleName = `.${styles.videoModule}`
+        const styleName = `.${videoStyles.videoModule}`
         const container = document.querySelector(styleName)
         if (container !== null) {
           stopVideo(container)
@@ -57,13 +57,11 @@ const VideoModule = () => {
     }
 
     document.addEventListener("click", closeVideo)
-  })
 
-  useEffect(() => {
     const keyHandler = ({ keyCode }) => {
       if (keyCode !== 27) return
 
-      const styleName = `.${styles.videoModule}`
+      const styleName = `.${videoStyles.videoModule}`
       const container = document.querySelector(styleName)
       stopVideo(container)
       setVideo(false)
@@ -74,15 +72,17 @@ const VideoModule = () => {
   })
 
   return (
-    <div className={styles.videoModule + ` staticWrapper`}>
+    <div className={videoStyles.videoModule + ` staticWrapper`}>
       <AngledSquare
         style={{
           position: "absolute",
           left: "0",
           top: "-23rem",
+          zIndex: "1",
         }}
       />
       <AngledSquareFull
+        className={videoStyles.angledSquareFull}
         style={{
           position: "absolute",
           right: "0",
@@ -90,15 +90,15 @@ const VideoModule = () => {
           zIndex: "-1",
         }}
       />
-      <div className={styles.boxBoarder}></div>
-      <div className={styles.contentWrapper}>
-        <div className={styles.imgWrapper}>
+      <div className={videoStyles.boxBoarder}></div>
+      <div className={videoStyles.contentWrapper}>
+        <div className={videoStyles.imgWrapper}>
           <Img
-            className={styles.videoCTA}
+            className={videoStyles.videoCTA}
             fluid={data.profileImg.childImageSharp.fluid}
           />
           <div
-            className={styles.playBtn}
+            className={videoStyles.playBtn}
             id="iframePlay"
             onClick={() => setVideo(true)}
           >
@@ -109,7 +109,7 @@ const VideoModule = () => {
             />
           </div>
 
-          <SquareIcon className={styles.dotsHoriz} />
+          <SquareIcon className={videoStyles.dotsHoriz} />
         </div>
         <Img
           fixed={data.bcgImg.childImageSharp.fixed}
@@ -119,11 +119,12 @@ const VideoModule = () => {
             top: "7rem",
             right: "4rem",
           }}
+          className={videoStyles.dotsBcg}
         />
-        <div className={styles.phaseTextWrapper}>
-          <h4 className={styles.phaseText}>ROI DRIVEN APPROACH</h4>
+        <div className={videoStyles.phaseTextWrapper}>
+          <h4 className={videoStyles.phaseText}>ROI DRIVEN APPROACH</h4>
           <Title>Your Campaigns Should be Performance Based</Title>
-          <p className={styles.paragraph}>
+          <p className={videoStyles.paragraph}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

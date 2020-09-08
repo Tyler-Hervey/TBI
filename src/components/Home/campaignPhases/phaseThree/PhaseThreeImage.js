@@ -16,7 +16,11 @@ const Image = () => {
     }
   `)
   return (
-    <Img className={styles.image} fluid={data.file.childImageSharp.fluid} />
+    <Img
+      className={styles.image}
+      style={{ zIndex: "101" }}
+      fluid={data.file.childImageSharp.fluid}
+    />
   )
 }
 

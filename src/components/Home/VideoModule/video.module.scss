@@ -7,14 +7,19 @@
 }
 
 .dotsBcg {
-  position: absolute;
-  right: 0;
+  @media screen and (max-width: 900px) {
+    right: -5rem !important;
+  }
 }
 
 .contentWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .boxBoarder {
@@ -25,6 +30,10 @@
   top: 7rem;
   height: 60vh;
   width: 85vw;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .dotsHoriz {
@@ -32,6 +41,17 @@
   z-index: -1;
   bottom: -5rem;
   left: -3rem;
+
+  @media screen and (max-width: 900px) {
+    left: 0;
+    right: -10rem;
+  }
+}
+
+.angledSquareFull {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .imgWrapper {
@@ -39,6 +59,11 @@
   margin-right: 9rem;
   transform: translateY(-30%);
   z-index: 1001;
+
+  @media screen and (max-width: 900px) {
+    transform: translateY(-10%);
+    margin: 0;
+  }
 }
 
 .playBtn {
@@ -47,17 +72,31 @@
   top: calc(50% + 20px);
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 900px) {
+    top: 50%;
+  }
 }
 
 .videoCTA {
   flex: 1;
-  min-width: 32vw;
+  width: 44rem;
+
+  @media screen and (max-width: 900px) {
+    min-width: 50vw;
+  }
 }
 
 .phaseTextWrapper {
   max-width: 46rem;
   margin-right: 9rem;
   flex: 1;
+
+  @media screen and (max-width: 900px) {
+    margin: 0;
+    margin-top: 5rem;
+    max-width: 80vw;
+  }
 }
 
 .paragraph {

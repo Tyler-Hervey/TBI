@@ -3,11 +3,19 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .phaseTextWrapper {
   max-width: 44rem;
-  margin-right: 9rem;
+  margin-left: 9rem;
+
+  @media screen and (max-width: 900px) {
+    margin: 4rem;
+  }
 }
 
 .paragraph {
@@ -20,11 +28,21 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
+
+  @media screen and (max-width: 900px) {
+    margin: 5rem 2rem;
+    flex-direction: column-reverse;
+  }
 }
 
 .image {
-  min-width: 65rem;
+  width: 55rem;
   margin-right: 9rem;
+  @media screen and (max-width: 900px) {
+    max-width: 44rem;
+    width: 100vw;
+    margin: 0;
+  }
 }
 
 .phaseTextTwo {
@@ -35,7 +53,6 @@
   text-transform: uppercase;
   letter-spacing: 2.2px;
   margin-bottom: 0.4rem;
-
   position: relative;
   z-index: 100;
 }
@@ -49,4 +66,8 @@
   top: -8rem;
   left: -4.2rem;
   z-index: -1;
+
+  @media screen and (max-width: 900px) {
+    left: -3rem;
+  }
 }

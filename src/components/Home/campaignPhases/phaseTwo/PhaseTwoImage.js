@@ -8,7 +8,7 @@ const Image = () => {
     {
       file: file(relativePath: { eq: "influencerPhaseTwo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }

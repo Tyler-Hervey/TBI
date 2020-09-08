@@ -21,6 +21,11 @@ export default styled(Title)`
     text-transform: uppercase;
     letter-spacing: 2.2px;
     margin-bottom: 0.4rem;
+
+    @media screen and (max-width: 480px) {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
   }
   .title {
     font-size: 3.8rem;
@@ -28,5 +33,10 @@ export default styled(Title)`
     font-weight: 500;
     line-height: 1.4;
     padding: 0 2rem;
+
+    @media screen and (max-width: 480px) {
+      font-size: 2.8rem;
+      line-height: 1.2;
+    }
   }
 `

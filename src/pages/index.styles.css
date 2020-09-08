@@ -3,7 +3,7 @@
 html {
   font-size: 62.5%;
 
-  @media only screen and (max-device-width: 480px) {
+  @media only screen and (max-device-width: 481px) {
     font-size: 50%;
   }
 }
