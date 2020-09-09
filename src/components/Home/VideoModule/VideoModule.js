@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import videoStyles from "./video.module.scss"
 import Img from "gatsby-image"
-import Title from "../Heading/Title"
+import Title from "../heading/Title"
 import { graphql, useStaticQuery } from "gatsby"
-import Video from "../Video/Video"
+import Video from "../video/Video"
 
 import SquareIcon from "../../../images/svg/rectangleHoriz.svg"
 import AngledSquare from "../../../images/svg/rectangle45.svg"
