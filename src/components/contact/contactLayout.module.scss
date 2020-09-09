@@ -1,0 +1,11 @@
+.contactBody {
+  flex: 1;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 120rem;
+}
