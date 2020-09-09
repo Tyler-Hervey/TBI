@@ -6,8 +6,8 @@ import Hero from "../components/home/hero/hero"
 import OurClients from "../components/home/OurClients/OurClients"
 import WhyInfluencers from "../components/home/whyInfluencers/WhyInfluencers"
 import Results from "../components/home/results/Results"
-import CampaignPhases from "../components/Home/campaignPhases/compaignPhases"
-import VideoModule from "../components/Home/VideoModule/VideoModule"
+import CampaignPhases from "../components/home/campaignPhases/compaignPhases"
+import VideoModule from "../components/home/VideoModule/VideoModule"
 import Cta from "../components/home/cta/Cta"
 
 const IndexPage = () => (
