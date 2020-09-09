@@ -1,5 +1,5 @@
 import React from "react"
-import Title from "../../Heading/Title"
+import Title from "../../heading/Title"
 import styles from "./phaseThree.module.scss"
 
 const PhaseText = props => {
