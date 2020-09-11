@@ -32,6 +32,7 @@ const StyledWrapper = styled.div`
     align-items: flex-start;
     height: 100%;
     margin-left: 0;
+    background: rgba(255, 255, 255, 0.7);
   }
 
   .primaryHeading {
