@@ -7,14 +7,21 @@ const SiteLogo = () => {
     {
       file: file(relativePath: { eq: "tbiLogo.png" }) {
         childImageSharp {
-          fixed(height: 75) {
+          fixed(height: 80) {
             ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `)
-  return <Img fixed={data.file.childImageSharp.fixed} />
+  return (
+    <Img
+      fixed={data.file.childImageSharp.fixed}
+      style={{
+        padding: "2rem",
+      }}
+    />
+  )
 }
 
 export default SiteLogo

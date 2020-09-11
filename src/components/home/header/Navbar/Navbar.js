@@ -36,7 +36,6 @@ class Navbar extends Component {
             </AniLink>
           </div>
           <div className={styles.ctaMenu}>
-            {/* <a href="/">Login</a> */}
             <AniLink fade to="/contact/" className={styles.btn}>
               Get Started Today
             </AniLink>
