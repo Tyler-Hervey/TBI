@@ -85,6 +85,7 @@ const Footer = styled.footer`
   }
   p {
     font-size: 1.8rem;
+    line-height: 2rem;
     margin-bottom: 4rem;
   }
   a {
@@ -109,6 +110,10 @@ const Footer = styled.footer`
 
   .column2 {
     flex: 1;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   .column3 {
@@ -116,6 +121,10 @@ const Footer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 `
 export default Layout

@@ -39,10 +39,8 @@ const WhyInfluencers = ({ className }) => {
             {whyMicro.map((item, index) => {
               return (
                 <div key={index}>
-                  <h4>
-                    <span className="icon">{item.icon}</span>
-                    <span className="iconTitle">{item.title}</span>
-                  </h4>
+                  <span className="icon">{item.icon}</span>
+                  <h4 className="iconTitle">{item.title}</h4>
                   <p className="text">{item.text}</p>
                 </div>
               )
@@ -101,8 +99,9 @@ const whyInfluencers = styled(WhyInfluencers)`
       background-color: var(--BgColor);
       border-radius: 10px;
       padding: 2rem;
-      width: 70vw;
+      width: 88vw;
       margin: 0;
+      z-index: 110;
     }
   }
 
@@ -123,6 +122,7 @@ const whyInfluencers = styled(WhyInfluencers)`
     }
   }
   .icon {
+    display: inline;
     background: white;
     padding: 1rem;
     border-radius: 50%;
@@ -130,6 +130,7 @@ const whyInfluencers = styled(WhyInfluencers)`
     font-size: 1.5rem;
   }
   .iconTitle {
+    display: inline;
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--SecondaryColor);
@@ -137,6 +138,7 @@ const whyInfluencers = styled(WhyInfluencers)`
     line-height: 1.5;
   }
   .text {
+    display: block;
     font-size: 1.4rem;
     font-weight: 400;
     margin-left: 5rem;
