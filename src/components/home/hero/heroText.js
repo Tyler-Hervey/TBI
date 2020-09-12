@@ -25,14 +25,16 @@ const StyledWrapper = styled.div`
   margin-left: 12rem;
   justify-content: center;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
     margin-left: 0;
-    background: rgba(255, 255, 255, 0.7);
+    bottom: 4rem;
+    background: rgba(255, 255, 255, 0.2);/
   }
 
   .primaryHeading {
@@ -40,16 +42,18 @@ const StyledWrapper = styled.div`
     font-size: 3.8rem;
     margin-bottom: 3rem;
     @media screen and (max-width: 480px) {
-      margin-left: 2rem;
+      font-size: 3.6rem;
+      line-height: 1.2;
     }
   }
+
   .subHeading {
     font-size: 2rem;
     max-width: 54rem;
     line-height: 26px;
     margin-bottom: 3rem;
     @media screen and (max-width: 480px) {
-      margin-left: 2rem;
+      /* margin-left: 2rem; */
     }
   }
 `
