@@ -2,18 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import Btn from "./btn"
 
-const HeroText = () => {
+const HeroText = ({ text }) => {
+  const { title, subtitle, buttonText, buttonLink } = text
+
   return (
     <StyledWrapper>
-      <h1 className="primaryHeading">
-        A Better Way <br />
-        To Reach Your Audience
-      </h1>
-      <p className="subHeading">
-        Take your Marketing to the Next Level with a Result Driven
-        Micro-Influencer Campaign
-      </p>
-      <Btn />
+      <h1 className="primaryHeading">{title}</h1>
+      <p className="subHeading">{subtitle}</p>
+      <Btn text={buttonText} link={buttonLink} />
     </StyledWrapper>
   )
 }
@@ -24,6 +20,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   margin-left: 12rem;
   justify-content: center;
+  max-width: 40rem;
 
   @media screen and (max-width: 600px) {
     display: flex;

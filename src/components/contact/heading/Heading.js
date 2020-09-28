@@ -74,6 +74,7 @@ const Wrapper = styled.div`
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: all 1s ease;
     margin-top: 2rem;
+    cursor: pointer;
 
     :hover {
       transform: translateY(-6px);

@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql, useStaticQuery } from "gatsby"
 
 const SiteLogo = () => {
@@ -15,12 +16,14 @@ const SiteLogo = () => {
     }
   `)
   return (
-    <Img
-      fixed={data.file.childImageSharp.fixed}
-      style={{
-        padding: "2rem",
-      }}
-    />
+    <AniLink fade to="/">
+      <Img
+        fixed={data.file.childImageSharp.fixed}
+        style={{
+          padding: "2rem",
+        }}
+      />
+    </AniLink>
   )
 }
 

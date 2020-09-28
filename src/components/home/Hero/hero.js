@@ -5,26 +5,29 @@ import HeroText from "./heroText"
 import styled from "styled-components"
 
 const Hero = ({ children }) => {
-  const bcgImg = useStaticQuery(graphql`
-    {
-      file: file(relativePath: { eq: "phoneMockups.png" }) {
-        childImageSharp {
+  const getContent = graphql`
+    query data {
+      hero: contentfulHeroModule {
+        backgroundImage {
           fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyContentfulFluid_tracedSVG
           }
         }
+        title
+        subtitle
+        buttonText
+        buttonLink
       }
     }
-  `)
+  `
+  const { hero } = useStaticQuery(getContent)
+  console.log(hero)
 
   return (
     <HeroWrapper>
       <BackgroundImage
         className="heroWrapper"
-        fluid={
-          (`linear-gradient(rgba(220, 15, 15, 0.73)`,
-          bcgImg.file.childImageSharp.fluid)
-        }
+        fluid={hero.backgroundImage.fluid}
         style={{
           height: "80vh",
           width: "100%",
@@ -32,7 +35,7 @@ const Hero = ({ children }) => {
           backgroundPosition: "top right",
         }}
       >
-        <HeroText />
+        <HeroText text={hero} />
       </BackgroundImage>
     </HeroWrapper>
   )
