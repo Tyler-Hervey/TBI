@@ -31,7 +31,9 @@ const Header = () => {
         <label>Message</label>
         <textarea name="message" id="message" rows="5" />
 
-        <button type="submit">Get in Touch</button>
+        <a>
+          <button type="submit">Get in Touch</button>
+        </a>
       </Form>
     </Wrapper>
   )
