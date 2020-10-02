@@ -12,7 +12,7 @@ const Cta = () => {
         doloribus nihil, placeat ad at, exercitationem dolorem quibusdam magni
         tempore distinctio pariatur?
       </Paragraph>
-      <Btn>Get in Touch</Btn>
+      <Btn text="Get in Touch" />
     </Wrapper>
   )
 }
