@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.23.12",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.4.9",
@@ -20,6 +21,7 @@
     "gatsby-plugin-transition-link": "^1.20.2",
     "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-remark-embedder": "^3.0.0",
+    "gatsby-source-contentful": "^2.3.47",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-source-youtube": "^2.0.1",
     "gatsby-transformer-remark": "^2.8.28",
@@ -34,6 +36,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "2.0.5"
   },
   "keywords": [

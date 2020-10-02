@@ -9,7 +9,6 @@ const Video = props => {
 
   return (
     <div className={`${styles.overlay} ${iframeStyles}`}>
-      {console.log(props.showVid)}
       <iframe
         className={styles.videoIframe}
         width="560"

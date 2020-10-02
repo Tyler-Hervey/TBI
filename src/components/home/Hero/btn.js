@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-const btn = () => {
-  return <StyledLink href="/">Speak with an Expert</StyledLink>
+const btn = props => {
+  console.log(props)
+  return <StyledLink href={props.link}>{props.text}</StyledLink>
 }
 
 const StyledLink = styled.a`

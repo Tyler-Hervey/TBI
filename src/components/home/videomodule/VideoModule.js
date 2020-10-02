@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import Title from "../heading/Title"
 import { graphql, useStaticQuery } from "gatsby"
 import Video from "../video/Video"
-
 import SquareIcon from "../../../images/svg/rectangleHoriz.svg"
 import AngledSquare from "../../../images/svg/rectangle45.svg"
 import AngledSquareFull from "../../../images/svg/rectangle45full.svg"
