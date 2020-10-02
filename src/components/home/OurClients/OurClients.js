@@ -4,33 +4,30 @@ import Img from "gatsby-image"
 import styles from "./ourclients.module.scss"
 
 const OurClients = () => {
-  const allImagesQuery = useStaticQuery(graphql`
-    query {
-      files: allFile(filter: { relativeDirectory: { eq: "logos" } }) {
-        edges {
-          node {
-            childImageSharp {
-              id
-              fixed(height: 50) {
-                ...GatsbyImageSharpFixed_tracedSVG
-              }
-            }
+  const getClient = graphql`
+    query clientData {
+      clients: contentfulClients {
+        title
+        clientLogos {
+          fixed(width: 95) {
+            ...GatsbyContentfulFixed_tracedSVG
           }
         }
       }
     }
-  `)
+  `
+  const { clients } = useStaticQuery(getClient)
 
   return (
     <section>
       <div className={styles.clientWrapper}>
-        <h4 className={styles.clientHeading}>Some of Our Happy Clients</h4>
+        <h4 className={styles.clientHeading}>{clients.title}</h4>
         <div className={styles.logoContainer}>
-          {allImagesQuery.files.edges.map(image => (
+          {clients.clientLogos.map(image => (
             <Img
-              key={image.node.childImageSharp.id}
+              key={image.fixed}
               className={styles.clientLogos}
-              fixed={image.node.childImageSharp.fixed}
+              fixed={image.fixed}
             />
           ))}
         </div>

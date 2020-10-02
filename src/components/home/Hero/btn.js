@@ -19,6 +19,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   transition: all 1s ease;
+  cursor: pointer;
 
   :hover {
     transform: translateY(-6px);
