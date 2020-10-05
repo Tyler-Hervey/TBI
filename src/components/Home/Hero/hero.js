@@ -6,7 +6,7 @@ import styled from "styled-components"
 
 const Hero = ({ children }) => {
   const getContent = graphql`
-    query data {
+    query heroData {
       hero: contentfulHeroModule {
         backgroundImage {
           fluid {
