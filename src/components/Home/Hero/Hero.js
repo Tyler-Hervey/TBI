@@ -5,7 +5,7 @@ import HeroText from "./heroText"
 import styled from "styled-components"
 
 const Hero = ({ children }) => {
-  const getContent = graphql`
+  const getContent = useStaticQuery(graphql`
     query heroData {
       hero: contentfulHeroModule {
         backgroundImage {
@@ -19,8 +19,10 @@ const Hero = ({ children }) => {
         buttonLink
       }
     }
-  `
-  const { hero } = useStaticQuery(getContent)
+  `)
+
+  const { hero } = getContent
+
   console.log(hero)
 
   return (
