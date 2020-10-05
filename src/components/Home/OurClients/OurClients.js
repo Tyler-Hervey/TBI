@@ -9,7 +9,8 @@ const OurClients = () => {
       clients: contentfulClients {
         title
         clientLogos {
-          fixed(width: 95) {
+          id
+          fixed(width: 85) {
             ...GatsbyContentfulFixed_tracedSVG
           }
         }
@@ -26,7 +27,7 @@ const OurClients = () => {
         <div className={styles.logoContainer}>
           {clients.clientLogos.map(image => (
             <Img
-              key={image.fixed}
+              key={image.id}
               className={styles.clientLogos}
               fixed={image.fixed}
             />
