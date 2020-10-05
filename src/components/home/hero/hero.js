@@ -23,8 +23,6 @@ const Hero = ({ children }) => {
 
   const { hero } = getContent
 
-  console.log(hero)
-
   return (
     <HeroWrapper>
       <BackgroundImage
