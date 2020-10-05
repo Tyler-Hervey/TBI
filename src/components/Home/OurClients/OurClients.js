@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import styles from "./ourclients.module.scss"
 
 const OurClients = () => {
-  const getClient = graphql`
+  const getClient = useStaticQuery(graphql`
     query clientData {
       clients: contentfulClients {
         title
@@ -15,8 +15,9 @@ const OurClients = () => {
         }
       }
     }
-  `
-  const { clients } = useStaticQuery(getClient)
+  `)
+
+  const { clients } = getClient
 
   return (
     <section>
