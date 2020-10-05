@@ -1,0 +1,60 @@
+.phaseWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem auto;
+
+  @media screen and (max-width: 900px) {
+    margin: 5rem 2rem;
+    flex-direction: column;
+  }
+}
+
+.image {
+  width: 42rem;
+
+  @media screen and (max-width: 900px) {
+    width: 70vw;
+    max-width: 42rem;
+  }
+}
+
+.phaseTextWrapper {
+  max-width: 46rem;
+  margin-right: 9rem;
+
+  @media screen and (max-width: 900px) {
+    margin: 4rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+}
+
+.phaseTextOne {
+  font-size: 1.6rem;
+  color: var(--PrimaryColor);
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 100;
+}
+
+.phaseTextOne:before {
+  position: absolute;
+  content: "1";
+  color: #f6f3fd;
+  font-size: 10rem;
+  font-weight: 800;
+  top: -8rem;
+  left: -3.2rem;
+  z-index: -1;
+
+  @media screen and (max-width: 900px) {
+    left: -2rem;
+  }
+}
